@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  
+
+    <meta charset="utf-8" />
+    <title>College Situation  App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content=" An interactive platform that connects students all over the
+                world with Schools, Scholarships, etc"
+    />
+
+
+
+    <!-- Begin loading animation -->
+    <style>
+      @keyframes hideLoader {
+        0% {
+          width: 100%;
+          height: 100%;
+        }
+        100% {
+          width: 0;
+          height: 0;
+        }
+      }
+      body > div.loader {
+        position: fixed;
+        background: white;
+        width: 100%;
+        height: 100%;
+        z-index: 1071;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        overflow: hidden;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      body:not(.loaded) > div.loader {
+        opacity: 1;
+      }
+      body:not(.loaded) {
+        overflow: hidden;
+      }
+      body.loaded > div.loader {
+        animation: hideLoader 0.5s linear 0.5s forwards;
+      }
+      .loading-animation {
+        width: 40px;
+        height: 40px;
+        margin: 100px auto;
+        background-color: #009b72;
+        border-radius: 100%;
+        animation: pulse 1s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      window.addEventListener("load", function() {
+        document.querySelector("body").classList.add("loaded");
+      });
+    </script>
+    <!-- End loading animation -->
+    <link
+      href="assets/css/theme.min.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+
+
+  
+  <body>
+    <div class="loader">
+      <div class="loading-animation"></div>
+    </div>
+
+    <div class="navbar-container bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light" data-sticky="top">
+        <div class="container">
+          <a
+            class="navbar-brand navbar-brand-dynamic-color fade-page"
+            href="index.html"
+          >
+            <img alt="Jumpstart" src="assets/img/logo.png" width="150" />
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a
+              href="mailto:info@collegesituation.com"
+              class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3"
+              >Contact support</a
+            >
+            <button
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              class="navbar-toggler"
+              data-target=".navbar-collapse"
+              data-toggle="collapse"
+              type="button"
+            >
+              <img
+                alt="Navbar Toggler Open Icon"
+                class="navbar-toggler-open icon icon-sm"
+                data-inject-svg
+                src="assets/img/icons/interface/icon-menu.svg"
+              />
+              <img
+                alt="Navbar Toggler Close Icon"
+                class="navbar-toggler-close icon icon-sm"
+                data-inject-svg
+                src="assets/img/icons/interface/icon-x.svg"
+              />
+            </button>
+          </div>
+          <div
+            class="collapse navbar-collapse order-3 order-lg-2 justify-content-lg-end"
+            id="navigation-menu"
+          >
+       
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <section class="bg-light o-hidden pt-5 pb-0">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div
+            class="col-lg-6 d-flex flex-column text-center text-lg-left mb-5 mb-lg-0"
+            data-aos="fade-right"
+          >
+            <div class="pr-xl-5">
+              <h1 class="display-3">
+                The College
+                <mark data-aos="highlight-text" data-aos-delay="250"
+                  >Situation App.</mark
+                >
+              </h1>
+              <p class="lead">
+                An interactive platform that connects students all over the
+                world with Schools, Scholarships, etc
+              </p>
+              <div class="mt-4 mt-lg-5">
+                <a href="https://testflight.apple.com/join/PH8iWecz"  target="_blank" class="mr-2">
+                  <img alt="App Store" src="assets/img/mobile-app/apple.svg" />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.favour.collegesituation" target="_blank" class="mr-2">
+                  <img
+                    alt="App Store"
+                    src="assets/img/mobile-app/google-play.svg"
+                  />
+                </a>
+
+                <br /><br />
+                <div
+                  class="alert rounded-lg bg-secondary d-inline-flex align-items-center"
+                >
+                  <div class="badge badge-pill badge-success">Note</div>
+                  <div class="mx-3">
+                    iOS  in Beta, but you can dowload it!
+                    <span
+                      class="font-weight-bold add-countdown-time"
+                      data-countdown-date="2019/10/05"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row justify-content-center" data-jarallax-element="-50">
+              <div
+                class="col-10 col-sm-8 col-md-7 col-lg-9 col-xl-7"
+                data-aos="zoom-in"
+                data-aos-delay="250"
+              >
+                <img
+                  class="img-fluid"
+                  src="assets/img/cslanding.png"
+                  alt="Screenshot"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="w-50 h-50 bottom right position-absolute" data-aos="zoom-in" data-aos-delay="500">
+        <div class="blob h-100 w-100 bottom right bg-warning opacity-90"></div>
+      </div>
+      <div class="divider divider-bottom bg-primary-3 mt-5"></div>
+
+
+    </section>
+    <section class="bg-primary-3 text-white">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 mb-5 mb-lg-0">
+           <h3 style="text-align: left;" >Schools</h3>
+            <div style="text-align: left">
+                Imagine having 30k+ Colleges available to you on your Smart Phone. Simply find & explore schools by swipping
+            </div>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+              <h3 style="text-align: left">Scholarships</h3>
+            <div  style="text-align: left">
+                Explores scholarships & fellowships available for Undergraduates, Postgraduates, etc without stress
+            </div>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+              <h3 style="text-align: left">Stories</h3>
+            <div  style="text-align: left">
+                Read and share stories of your journey in your college / scholarship search, immigration process, etc
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="o-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 mb-5 mb-xl-0" data-aos="fade-right">
+            <div class="text-center text-xl-left mb-lg-5">
+              <h3 class="h1">
+             Awesome 
+                <mark data-aos="highlight-text" data-aos-delay="250"
+                  >features</mark
+                >
+               
+              </h3>
+            </div>
+            <ul
+              class="nav nav-pills justify-content-center flex-xl-column pr-xl-5"
+              role="tablist"
+            >
+              <li class="nav-item">
+                <a
+                  class="btn btn-lg btn-primary active w-100"
+                  id="tab-1"
+                  data-toggle="tab"
+                  href="#home-6"
+                  role="tab"
+                  aria-controls="tab-1"
+                  aria-selected="true"
+                >
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/img/signup.png"
+                      alt="Icon"
+                      class="icon bg-primary"
+                    
+                    />
+                    <span>Easy signup process</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-lg btn-primary w-100"
+                  id="tab-2"
+                  data-toggle="tab"
+                  href="#profile-6"
+                  role="tab"
+                  aria-controls="tab-2"
+                  aria-selected="false"
+                >
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/img/sub.png"
+                      alt="Icon"
+                      class="icon bg-primary"
+                     
+                    />
+                    <span>Very affordable pricing</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-lg btn-primary w-100"
+                  id="tab-3"
+                  data-toggle="tab"
+                  href="#contact-6"
+                  role="tab"
+                  aria-controls="tab-3"
+                  aria-selected="false"
+                >
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/img/colleges.png"
+                      alt="Icon"
+                      class="icon bg-primary"
+                     
+                    />
+                    <span>Swipe, Swipe, Swipe</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col" data-aos="fade-left" data-aos-delay="250">
+            <div class="tab-content">
+              <div
+                class="tab-pane fade show active"
+                id="home-6"
+                role="tabpanel"
+                aria-labelledby="tab-1"
+              >
+                <div class="row justify-content-around align-items-center">
+                  <div class="col-8 col-sm-4 col-lg-4 col-xl-5">
+                    <img
+                      src="assets/img/signup.png"
+                      alt="Screenshot"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="col-sm col-md-6 mt-4 mt-sm-0">
+                    <h5>Swift signup process</h5>
+                    <p>
+                    It literally takes 10 seconds to signup & get onboarded! 
+                    </p>
+
+                    <p class="rounded align-items-center pl-3 pr-3 pr-md-4 py-2 d-inline-flex text-left bg-secondary">After signing up you can either choose the 3 day free trial or select the Monthly or Annual subscription</p>
+                   
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="profile-6"
+                role="tabpanel"
+                aria-labelledby="tab-2"
+              >
+                <div class="row justify-content-around align-items-center">
+                  <div class="col-8 col-sm-4 col-lg-4 col-xl-5">
+                    <img
+                      src="assets/img/sub.png"
+                      alt="Screenshot"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="col-sm col-md-6 mt-4 mt-sm-0">
+                    <h5>Very affordable pricing</h5>
+                    <p>
+                     We understand that you are students, hence, we have made our prices substantially affordable
+                    </p>
+                   
+
+
+                    <p class="rounded align-items-center pl-3 pr-3 pr-md-4 py-2 d-inline-flex text-left bg-secondary">We recommend that you go with the annual subscription, but you can first try out the app using the 3 day trial available</p>
+
+
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="contact-6"
+                role="tabpanel"
+                aria-labelledby="tab-3"
+              >
+                <div class="row justify-content-around align-items-center">
+                  <div class="col-8 col-sm-4 col-lg-4 col-xl-5">
+                    <img
+                      src="assets/img/colleges.png"
+                      alt="Screenshot"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="col-sm col-md-6 mt-4 mt-sm-0">
+                    <h5>Explore colleges</h5>
+                    <p>
+                     Simply swipe / search to find colleges. You get to see an overview of every college at a Glance!
+                    </p>
+                   
+
+                    <p class="rounded align-items-center pl-3 pr-3 pr-md-4 py-2 d-inline-flex text-left bg-secondary"> Get every info you need about a college like Application link, phone number, email, etc</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--
+    <section class="bg-light pb-0">
+      <div class="container">
+        <div class="row section-title justify-content-center text-center">
+          <div class="col-md-9 col-lg-8 col-xl-7">
+            <h3 class="display-4">What people are saying</h3>
+            <div class="lead">
+              We've recieved a lot of great reviews from awesome people. 
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img
+              src="assets/img/avatars/female-4.jpg"
+              alt="Shelley McNabb avatar image"
+              class="avatar avatar-lg mb-3 mb-md-4"
+            />
+            <blockquote class="blockquote p-0 border-0 text-body pr-xl-4">
+              &ldquo;<mark data-aos="highlight-text" data-aos-delay="200"
+                >We cut our build times in half</mark
+              >
+              compared to our previous process. Love it.&rdquo;
+            </blockquote>
+            <div class="d-flex flex-column align-items-center">
+              <h6 class="mb-1">Shelley McNabb</h6>
+              <span>Software Engineer</span>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img
+              src="assets/img/avatars/female-3.jpg"
+              alt="Mary Goddard avatar image"
+              class="avatar avatar-lg mb-3 mb-md-4"
+            />
+            <blockquote class="blockquote p-0 border-0 text-body pr-xl-4">
+              &ldquo;The support team is super helpful. We're so glad to have
+              them on call.&rdquo;
+            </blockquote>
+            <div class="d-flex flex-column align-items-center">
+              <h6 class="mb-1">Mary Goddard</h6>
+              <span>Business Relations</span>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img
+              src="assets/img/avatars/male-2.jpg"
+              alt="Bradley Singleton avatar image"
+              class="avatar avatar-lg mb-3 mb-md-4"
+            />
+            <blockquote class="blockquote p-0 border-0 text-body pr-xl-4">
+              &ldquo;Reliability is what Jumpstart is known for, and
+              <mark data-aos="highlight-text" data-aos-delay="200"
+                >they've totally delivered</mark
+              >
+              this time.&rdquo;
+            </blockquote>
+            <div class="d-flex flex-column align-items-center">
+              <h6 class="mb-1">Bradley Singleton</h6>
+              <span>Keeper of Tunes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider divider-bottom bg-white"></div>
+    </section>
+    <section class="o-hidden">
+      <div class="container">
+        <div
+          class="row align-items-center justify-content-around text-center text-lg-left"
+        >
+          <div
+            class="col-md-9 col-lg-6 col-xl-5 mb-4 mb-lg-0 pr-lg-5 pr-xl-0 order-lg-2"
+          >
+            <div>
+              <h2 class="display-4">Grab it right now</h2>
+              <p class="lead">
+               Download the college situation app & Jumpstart your college future today.
+              </p>
+              <div
+                class="d-flex flex-column flex-sm-row mt-4 mt-md-5 justify-content-center justify-content-lg-start"
+              >
+                <a href="#" class="mr-2">
+                  <img alt="App Store" src="assets/img/mobile-app/apple.svg" />
+                </a>
+                <a href="#" class="mr-2">
+                  <img
+                    alt="App Store"
+                    src="assets/img/mobile-app/google-play.svg"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg order-lg-1">
+            <div class="row justify-content-center" data-jarallax-element="-50">
+              <div class="col-10 col-sm-8 col-md-6 col-lg-8 col-xl-6">
+                <img
+                  class="img-fluid position-relative"
+                  src="assets/img/csDemo.gif"
+                  alt="Screenshot"
+                />
+                <div
+                  class="h-50 w-50 position-absolute bottom left d-none d-lg-block"
+                  data-jarallax-element="-50"
+                >
+                  <div
+                    class="blob blob-2 w-100 h-100 bg-primary-2 opacity-90 top right"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  -->
+    <footer class="bg-primary-3 text-white links-white pb-4 footer-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-auto mr-xl-5 col-md-3 mb-4 mb-md-0">
+            <h5>College Situation</h5>
+            <ul class="nav flex-row flex-md-column">
+           
+            
+              <li class="nav-item mr-3 mr-md-0">
+                <a href="privacy-policy.html"  target="_blank" class="nav-link fade-page px-0 py-2"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+         
+          
+       
+        </div>
+        <div class="row">
+          <div class="col">
+            <hr />
+          </div>
+        </div>
+        <div
+          class="row flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left"
+        >
+          <div class="col-auto">
+            <div
+              class="d-flex flex-column flex-sm-row align-items-center text-small"
+            >
+              <div class="text-muted">
+                &copy; 2019 The College Situation
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-auto mt-3 mt-lg-0">
+            <ul class="list-unstyled d-flex mb-0">
+            
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img
+                    src="assets/img/icons/social/twitter.svg"
+                    alt="Twitter"
+                    class="icon icon-xs bg-white"
+                    data-inject-svg
+                  />
+                </a>
+              </li>
+           
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img
+                    src="assets/img/icons/social/facebook.svg"
+                    alt="Facebook"
+                    class="icon icon-xs bg-white"
+                    data-inject-svg
+                  />
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img
+                    src="assets/img/icons/social/instagram.svg"
+                    alt="Google"
+                    class="icon icon-xs bg-white"
+                    data-inject-svg
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Required vendor scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+    <!-- 
+             This appears in the demo only.  This script ensures our demo countdowns are always showing a date in the future 
+             by altering the date before the countdown is initialized 
+        -->
+   
+
+    <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
+
+    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+    <script type="text/javascript" src="assets/js/aos.js"></script>
+    <!-- Clipboard (copies content from browser into OS clipboard) -->
+   
+    <!-- Fancybox (handles image and video lightbox and galleries) -->
+ 
+
+  
+    <script type="text/javascript" src="assets/js/typed.min.js"></script>
+    <!-- Required theme scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+    <!-- This script appears only on the demo.  It is used to delay unnecessary image loading until after the main page content is loaded. -->
+  
+
+  </body>
+
+</html>
